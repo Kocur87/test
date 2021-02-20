@@ -1,0 +1,7 @@
+Is it a GRE tunnel? IN that case try:
+firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p gre -j ACCEPT
+firewall-cmd --permanent --direct --add-rule ipv6 filter INPUT 0 -p gre -j ACCEPT
+firewall-cmd --reload
+
+
+
